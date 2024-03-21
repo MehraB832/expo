@@ -5,7 +5,7 @@ buildscript {
         rnsDefaultTargetSdkVersion = 34
         rnsDefaultCompileSdkVersion = 34
         rnsDefaultMinSdkVersion = 21
-        rnsDefaultKotlinVersion = '1.8.0'
+        rnsDefaultKotlinVersion = '1.9.22'
     }
     ext.safeExtGet = {prop, fallback ->
         rootProject.ext.has(prop) ? rootProject.ext.get(prop) : fallback
@@ -101,7 +101,7 @@ android {
 
         }
         res {
-            if (safeExtGet('compileSdkVersion', rnsDefaultCompileSdkVersion) >= 33) {
+            if (safeExtGet('compileSdkVersion', rnsDefaultCompileSdkVersion) >= 33) { //
                 srcDirs = ["${androidResDir}/base", "${androidResDir}/v33"]
             } else {
                 srcDirs = ["${androidResDir}/base"]

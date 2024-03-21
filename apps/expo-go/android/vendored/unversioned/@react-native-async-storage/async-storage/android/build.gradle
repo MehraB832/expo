@@ -39,7 +39,7 @@ buildscript {
             ? rootProject.ext['kotlinVersion']
             : rootProject.hasProperty('AsyncStorage_kotlinVersion')
             ? rootProject.properties['AsyncStorage_kotlinVersion']
-            : '1.8.10'
+            : '1.9.22'
 
     repositories {
         mavenCentral()
@@ -74,10 +74,10 @@ if (useNextStorage) {
 }
 
 android {
-    compileSdkVersion safeExtGet('compileSdkVersion', 32)
+    compileSdkVersion safeExtGet('compileSdkVersion', 34)
     defaultConfig {
         minSdkVersion safeExtGet('minSdkVersion', 23)
-        targetSdkVersion safeExtGet('targetSdkVersion', 32)
+        targetSdkVersion safeExtGet('targetSdkVersion', 34)
         buildConfigField "Long", "AsyncStorage_db_size", "${dbSizeInMB}L"
         buildConfigField "boolean", "AsyncStorage_useDedicatedExecutor", "${useDedicatedExecutor}"
         buildConfigField "boolean", "AsyncStorage_useNextStorage", "${useNextStorage}"

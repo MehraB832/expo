@@ -8,7 +8,7 @@ buildscript {
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:7.2.2")
+        classpath("com.android.tools.build:gradle:8.2.2")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
     }
 }
@@ -41,7 +41,7 @@ android {
         println "DEPRECATION WARNING: The `namespace` property is not available in your version of AGP. Please upgrade to AGP 4.2+."
     }
 
-    compileSdk getExtOrDefault('compileSdkVersion', 31)
+    compileSdk getExtOrDefault('compileSdkVersion', 34)
 
     // Used to override the NDK path/version on internal CI or by allowing
     // users to customize the NDK path/version from their root project (e.g. for M1 support)
@@ -54,7 +54,7 @@ android {
 
     defaultConfig {
         minSdkVersion getExtOrDefault('minSdkVersion', 21)
-        targetSdkVersion getExtOrDefault('targetSdkVersion', 31)
+        targetSdkVersion getExtOrDefault('targetSdkVersion', 34)
         buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
         ndk {
