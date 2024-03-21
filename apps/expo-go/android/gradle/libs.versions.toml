@@ -5,7 +5,7 @@ targetSdk = "34"
 compileSdk = "34"
 buildTools = "34.0.0"
 # Dependencies versions
-agp = "8.1.1"
+agp = "8.2.2"
 fresco = "3.1.0"
 
 [libraries]
